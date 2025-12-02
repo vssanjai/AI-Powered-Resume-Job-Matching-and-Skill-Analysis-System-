@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSS Company | Match Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <div class="result-container">
+    <h1>🎯 Match Analysis Report</h1>
+
+    <div class="progress-box">
+      <div class="progress-bar" id="progressBar" data-value="{{ match }}"></div>
+      <p class="percent">{{ match }}% Match</p>
+      <h3 class="message">{{ message }}</h3>
+    </div>
+
+    <section class="skill-section">
+      <h2>✅ Skills Found in Resume</h2>
+      <ul>
+        {% for skill in resume_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+
+      <h2>📋 Skills Mentioned in Job Description</h2>
+      <ul>
+        {% for skill in jd_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+
+      <h2>⚠️ Missing Skills</h2>
+      {% if missing_skills %}
+      <ul class="missing">
+        {% for skill in missing_skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="good">💪 Perfect Match! You have all the required skills!</p>
+      {% endif %}
+    </section>
+
+    <div class="actions">
+      <a href="/" class="btn back-btn">← Analyze Another Resume</a>
+      <button onclick="window.print()" class="btn">🖨️ Download Report</button>
+    </div>
+  </div>
+</body>
+</html>

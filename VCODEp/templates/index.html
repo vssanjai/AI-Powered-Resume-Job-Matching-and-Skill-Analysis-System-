@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSS Company | AI Resume–Job Matcher</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 VSS Company AI Resume–Job Matching System</h1>
+      <p>Analyze how well your resume matches a job role using AI and NLP</p>
+    </header>
+
+    <form action="/analyze" method="POST" enctype="multipart/form-data" class="upload-form">
+      <label>📄 Upload Resume (PDF only)</label>
+      <input type="file" name="resume" accept=".pdf" required>
+
+      <label>💼 Paste Job Description</label>
+      <textarea name="job_description" placeholder="Paste the job description here..." required></textarea>
+
+      <button type="submit" class="btn">Analyze Match</button>
+    </form>
+
+    <footer>
+      <p>Developed by <b>VSS AI Team</b> • Powered by Flask + ML + NLP</p>
+    </footer>
+  </div>
+</body>
+</html>

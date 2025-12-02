@@ -1,0 +1,124 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #007bff, #00c4cc);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  background: #fff;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+header h1 {
+  color: #003366;
+  font-size: 26px;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  font-size: 15px;
+  width: 100%;
+}
+
+button, .btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background: #0056b3;
+}
+
+.result-container {
+  max-width: 850px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.progress-box {
+  margin: 20px auto;
+  background: #eee;
+  height: 25px;
+  border-radius: 20px;
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #00cc99, #007bff);
+  height: 100%;
+  width: 0;
+  transition: width 2s ease;
+}
+
+.percent {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.message {
+  font-size: 18px;
+  font-weight: 600;
+  background: #f0f8ff;
+  color: #00509e;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.skill-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-section li {
+  display: inline-block;
+  background: #e6f0ff;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.missing li {
+  background: #ffcccc;
+}
+
+.good {
+  color: green;
+  font-weight: bold;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
